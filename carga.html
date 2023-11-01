@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de gastos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Carga de Gastos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carga.html">Carga de Gastos</a></li>
+            <li><a href="stats.html">Estadísticas</a></li>
+        </ul>
+    </nav>
+    <form id="gastoForm" class="gastoForm">
+        <fieldset>
+            <legend>Ingrese los gastos realizados:</legend>
+
+            <label for="fecha">Fecha:</label>
+            <br>
+            <div class="popup">
+                <input type="date" id="fecha" name="fecha" placeholder="dd/mm/aa" pattern="/^\d{2}\/\d{2}\/\d{2}$/">
+                <span class="error"></span>
+            </div>
+            <br><br>
+
+            <label for="motivo">Motivo:</label>
+            <br>
+            <div class="popup">
+                <input type="text" id="motivo" name="motivo" placeholder="Motivo">
+                <span class="error"></span>
+            </div>
+            <br><br>
+
+            <label for="medio">Medio de pago:</label>
+            <select id="medio" name="medio">
+                <option value="Efectivo">Efectivo</option>
+                <option value="Debito">Débito</option>
+                <option value="Credito">Crédito</option>
+            </select>
+            <a href="agregarMedio.html">Agregar nuevo método de pago</a>
+            <br><br>
+
+            <label for="gastoTotal">Total del gasto:</label>
+            <br>
+            <div class="popup">
+                <input type="text" id="gastoTotal" name="gastoTotal" placeholder="Total del gasto">
+                <span class="error"></span>
+            </div>
+            <br><br>
+
+            <button type="submit" value="Enviar" id="enviarGasto">Enviar</button>
+        </fieldset>
+    </form>
+    <footer>
+        <p>&copy; 2023 Matías Carrizo</p>
+    </footer>
+    <script src="scripts/carga.js"></script>
+</body>
+</html>

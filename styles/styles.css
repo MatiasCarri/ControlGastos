@@ -1,0 +1,233 @@
+/* -------- Estilos del sitio -------- */
+
+body {
+    font-family: 'Roboto', sans-serif;;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23288d16' fill-opacity='0.42'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::after{
+    content: "";
+    display: block;
+    height: 60px;
+}
+
+header {
+    background-color: #606C38;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #ECEC74;
+    padding: 10px;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+    border-bottom: 2px solid #606C38;
+    border-width: 130%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+/* -------- Estilos de la tabla del index -------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+    border-style: solid;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #606C38;
+    color: #ffffff;
+}
+
+/* -------- Estilos del total -------- */
+#total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#sumaTotal {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+/* -------- Estilos del pie de página -------- */
+footer {
+    position: absolute;
+    text-align: center;
+    background-color: #000000;
+    color: #fff;
+    /* padding: 10px; */
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+/* -------- Estilos del formulario de carga.html -------- */
+
+.gastoForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.gastoForm fieldset {
+    border: 1px solid #606C38;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.gastoForm legend {
+    background-color: #606C38;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.gastoForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+.gastoForm input[type="text"],
+.gastoForm select {
+    width: 100%;
+    padding: 10px;
+    margin-left: -10px; /* Buscar una solución mas práctica */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.gastoForm button[type="submit"] {
+    background-color: #606C38;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.gastoForm button[type="submit"]:hover {
+    background-color: #606C38; /* Cambio de color al pasar el mouse */
+}
+
+
+/* Estilos para los mensajes de error en validación del formulario */
+.error {
+    width: 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 5px 5px 5px 5px;
+  
+    box-sizing: border-box;
+}
+  
+.error.active {
+    padding: 0.3em;
+}
+
+/* Estilos del popup para validación del formulario */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+ }
+  
+.popup .error {
+    visibility: hidden;
+    width: 160px;
+    background-color: #900;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.popup .error::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #900 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s, fadeOut 1s 2s;
+    animation: fadeIn 1s, fadeOut 1s 2s;
+}
+  
+/* animaciones de fade in y fade out del popup */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+  
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+}

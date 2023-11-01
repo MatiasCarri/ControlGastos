@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos - Matías Carrizo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Control de Gastos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carga.html">Carga de Gastos</a></li>
+            <li><a href="stats.html">Estadísticas</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Registro de Gastos</h2>
+        <table id="tablaGastos">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Motivo</th>
+                    <th>Método de Pago</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>11/10/2023</td>
+                    <td>Comida</td>
+                    <td>Débito</td>
+                    <td>1300</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>13/10/2023</td>
+                    <td>Sube</td>
+                    <td>Efectivo</td>
+                    <td>1000</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="total">
+            <p>Total: <span id="sumaTotal">0.00</span></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Matías Carrizo</p>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
